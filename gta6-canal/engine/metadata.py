@@ -92,6 +92,14 @@ def main():
         out.append("#GTA6 #GTAVI #Leonida")
         out.append("```")
         out.append(f"\n**Etiquetas:** {v['tags']}\n")
+    out.append("\n---\n\n## ✅ Comprobación de datos (la noche del 18)\n")
+    out += ["- [ ] Hora de desbloqueo: ¿sigue siendo medianoche hora local? (vídeo 1, cap. 01)",
+            "- [ ] Precio 79,99 $ / 99,99 $ (vídeo 1, cap. 03)",
+            "- [ ] Tamaño ~212 GB (vídeo 1, cap. 04)",
+            "- [ ] ¿Ha anunciado Rockstar GTA Online para el día 1? Si es así, NO subas el vídeo 1 sin corregir el cap. 05",
+            "- [ ] ¿Se ha anunciado versión de PC? Si es así, NO subas el vídeo 4",
+            "",
+            "Para corregir: edita la frase en `guiones/`, y vuelve a renderizar ese vídeo (unos 15 min)."]
     open(os.path.join(BASE, "PUBLICAR.md"), "w").write("\n".join(out) + "\n")
 
 

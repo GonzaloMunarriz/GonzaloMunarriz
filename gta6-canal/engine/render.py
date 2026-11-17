@@ -540,7 +540,7 @@ def scene_stat(frame, s, lt, dur, t):
     val = s["value"]
     if "count" in s:
         target = s["count"]
-        k = ease_out(lt / 1.6)
+        k = 1.0 if lt >= 1.6 else ease_out(lt / 1.6)
         cur = target * k
         fmt = s.get("fmt", "{:,.0f}")
         val = fmt.format(cur).replace(",", ".") if s.get("es_thousands", True) else fmt.format(cur)
@@ -620,12 +620,16 @@ def scene_map(frame, s, lt, dur, t):
     if s.get("info"):
         a = ease_out((lt - 0.6) / 0.5)
         items = s["info"]
-        pw, ph = 560, 90 + 64 * len(items)
-        px, py = (W - pw - 60, 300) if (not hl or REGIONS[hl][1][0] < 0.6) else (60, 300)
+        pw = 600
+        imgs = [text_img("• " + it, F_SEMI, 36, WHITE, max_w=pw - 70) for it in items]
+        ph = 70 + sum(im.height - 8 + 14 for im in imgs)
+        px, py = 50, 340
         paste(frame, panel(pw, ph, border=REGIONS[hl][2] if hl else PINK), px + (1 - a) * 60, py, a)
-        for j, it in enumerate(items):
+        yy = py + 36
+        for j, im in enumerate(imgs):
             aj = ease_out((lt - 0.9 - j * 0.5) / 0.4)
-            paste(frame, text_img("• " + it, F_SEMI, 34, WHITE, max_w=pw - 70), px + 36, py + 40 + j * 64, aj * a)
+            paste(frame, im, px + 36, yy, aj * a)
+            yy += im.height - 8 + 14
 
 
 def scene_compare(frame, s, lt, dur, t):
