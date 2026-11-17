@@ -63,14 +63,14 @@ Recorremos las 6 regiones confirmadas de Leonida en GTA 6: Vice City, Leonida Ke
 
 CAPÍTULOS
 0:00 Intro
-1:26 Vice City
-2:42 Leonida Keys
-3:39 Grassrivers
-4:42 Port Gellhorn
-5:47 Ambrosia
-6:45 Mount Kalaga
-7:44 El agua lo cambia todo
-9:18 ¿Cómo de grande es?
+1:31 Vice City
+2:58 Leonida Keys
+4:04 Grassrivers
+5:06 Port Gellhorn
+6:17 Ambrosia
+7:09 Mount Kalaga
+8:08 El agua lo cambia todo
+9:45 ¿Cómo de grande es?
 
 Suscríbete: cobertura diaria de GTA 6 durante todo el lanzamiento.
 
