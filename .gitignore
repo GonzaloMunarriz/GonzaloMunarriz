@@ -1,0 +1,4 @@
+gta6-canal/salida/_work_*/
+gta6-canal/salida/*.mp4
+gta6-canal/salida/log_*.txt
+__pycache__/
